@@ -1,0 +1,8 @@
+{
+  "date": {
+    "day": 31,
+    "month": 12,
+    "year": 1999
+  },
+  "hoursWorked": 0.0
+}
