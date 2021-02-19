@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="window" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.julianhecker.lab_fx.LabController">
+    <children>
+        <VBox prefHeight="196.0" prefWidth="300">
+         <MenuBar>
+           <menus>
+             <Menu mnemonicParsing="false" text="Background Color">
+               <items>
+                 <MenuItem fx:id="redMenu" mnemonicParsing="false" onAction="#handleRedAction" text="Red" />
+                     <MenuItem fx:id="greenMenu" mnemonicParsing="false" onAction="#handleGreenAction" text="Green" />
+                     <MenuItem fx:id="blueMenu" mnemonicParsing="false" onAction="#handleBlueAction" text="Blue" />
+               </items>
+             </Menu>
+           </menus>
+         </MenuBar>
+            <Label text="Choose your color!">
+            <font>
+               <Font name="Courier New Bold" size="18.0" />
+            </font>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets></Label>
+            <Button fx:id="redButton" onAction="#handleRedAction" prefHeight="25.0" prefWidth="70.0" text="Red" />
+         <Button fx:id="greenButton" mnemonicParsing="false" onAction="#handleGreenAction" prefHeight="25.0" prefWidth="70.0" text="Green" />
+         <Button fx:id="blueButton" mnemonicParsing="false" onAction="#handleBlueAction" prefHeight="25.0" prefWidth="70.0" text="Blue" />
+        </VBox>
+    </children>
+</AnchorPane>
