@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="window" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.julianhecker.presentation.TimeSheetController">
+    <children>
+        <VBox prefHeight="196.0" prefWidth="300">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem fx:id="menuOpen" mnemonicParsing="false" onAction="#handleOpen" text="Open" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="menuSaveAs" mnemonicParsing="false" onAction="#handleSaveAs" text="Save As" />
+                        <MenuItem fx:id="menuSaveReport" mnemonicParsing="false" onAction="#handleSaveReport" text="Save Report" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="menuExit" mnemonicParsing="false" onAction="#handleExit" text="Exit" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Worker">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutX="25.0" layoutY="4.0" prefHeight="120.0" prefWidth="250.0">
+                                 <children>
+                                    <HBox prefHeight="30.0" prefWidth="300.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="82.0" text="First Name" translateY="8.0" />
+                                          <TextField fx:id="workerFirstName" prefHeight="25.0" prefWidth="169.0" translateY="4.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="30.0" prefWidth="300.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="82.0" text="Last Name" translateY="8.0" />
+                                          <TextField fx:id="workerLastName" prefHeight="25.0" prefWidth="169.0" translateY="4.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="30.0" prefWidth="300.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="82.0" text="Employee ID" translateY="8.0" />
+                                          <TextField fx:id="workerId" prefHeight="25.0" prefWidth="169.0" translateY="4.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="30.0" prefWidth="300.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="82.0" text="Pay Rate" translateY="8.0" />
+                                          <TextField fx:id="workerPayRate" prefHeight="25.0" prefWidth="169.0" translateY="4.0" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Shifts">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutX="25.0" layoutY="8.0" prefHeight="120.0" prefWidth="250.0">
+                                 <children>
+                                    <ListView fx:id="shiftData" prefHeight="120.0" prefWidth="250.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+        </VBox>
+    </children>
+</AnchorPane>

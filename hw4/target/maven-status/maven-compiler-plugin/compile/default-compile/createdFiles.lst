@@ -1,0 +1,7 @@
+com\julianhecker\presentation\TimeSheetController.class
+com\julianhecker\presentation\Main.class
+com\julianhecker\business\MyDate.class
+com\julianhecker\business\Shift.class
+com\julianhecker\business\Worker.class
+com\julianhecker\presentation\TimeSheetApplication.class
+com\julianhecker\business\TimeSheet.class
