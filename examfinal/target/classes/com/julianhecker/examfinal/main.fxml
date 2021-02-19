@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane fx:id="window" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.julianhecker.examfinal.ExamController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="300.0">
+         <children>
+            <MenuBar prefHeight="25.0" prefWidth="89.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem id="menu_open" mnemonicParsing="false" onAction="#handle_menu_open" text="Open JSON" />
+                        <MenuItem id="menu_save" mnemonicParsing="false" onAction="#handle_menu_save" text="Save JSON" />
+                        <MenuItem id="menu_exit" mnemonicParsing="false" onAction="#handle_menu_exit" text="Exit" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <HBox prefHeight="175.0" prefWidth="300.0">
+               <children>
+                  <VBox prefHeight="175.0" prefWidth="150.0">
+                     <children>
+                        <Label text="State Name" />
+                        <TextField fx:id="field_state" />
+                        <Label text="Capital Name" />
+                        <TextField fx:id="field_capital" />
+                        <Label text="Population" />
+                        <TextField fx:id="field_population" />
+                        <Label text="Total Revenue" />
+                        <TextField fx:id="field_total" />
+                     </children>
+                  </VBox>
+                  <ListView fx:id="state_data" prefHeight="175.0" prefWidth="150.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
